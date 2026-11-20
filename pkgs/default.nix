@@ -157,6 +157,10 @@
             };
           };
 
+          pokeone = pkgs.callPackage ./pokeone {
+            inherit (config.packages) umu-launcher-git;
+          };
+
           proton-ge = self.lib.mkDeprecated "warn" pkgs.emptyFile {
             name = "proton-ge";
             target = "package";
